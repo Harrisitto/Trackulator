@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trackuladora</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" />
+        <audio id="mySoundClick" src="sound/ui-click.mp3" preload="auto"></audio>
+        <audio id="mySoundRing" src="sound/ui-ring" preload="auto"></audio>
+    </head>
+    <body id="body">
+        <div id="title-box">
+            <!-- <h1 id="title">TRACKULADORA</h1> en el convertidor a app ja ho posa-->
+            <h2 id="subtitle">Aqui podras calcular todas las matematicas del ciclismo en pista</h2>
+        </div>
+        <nav id="navbar">
+            <button id="velcad-btn" class="nav-button">Velocidad -> Cadencia</button>
+            <button id="cadvel-btn" class="nav-button">Cadencia -> Velocidad</button>
+        </nav>
+        <div id="start-screen" class="screen">
+            <button id="start-button">🚲</button>
+        </div>
+        <div id="VelCad-div" class="screen">
+            <form id="VelCad-form" class="form">
+                <legend>Convierte datos de velocidad en datos de cadencia y desarrollo</legend>
+                <input class="form-submit" type="submit">
+                <div class="form-label-input">
+                    <label class="form-label">Velocidad:</label>
+                    <select id="input-velocidad-tipo" name="input-velocidad" class="form-input" required>
+                        <option value="none">Elegir...</option>
+                        <option value="velocidad">Velocidad (km/h)</option>
+                        <option value="tiempo-sec">Segundos por vuelta</option>
+                        <option value="tiempo-km">Tiempo en 1km</option>
+                        <option value="tiempo-4km">Tiempo en 4km</option>
+                    </select>
+                </div>
+                <div id="input-velocidad-valor" class="form-label-input">
+                        <!--edited in java-->
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Cadencia (rpm): </label>
+                    <input id="cadencia-des" class="form-input" type="number" min="40" max="300" value="100" required>
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Perimetro de la rueda (mm): </label>
+                    <input id="perimetro-des" class="form-input" type="number" min="1000" max="3000" value="2130" required>
+                </div>
+            </form>
+            <div class="separator"></div>
+            <div id="VelCad-results" class="form-results">
+                <!--edited in java-->
+            </div>
+        </div>
+        <div id="CadVel-div" class="screen">
+            <form id="CadVel-form" class="form" >
+                <legend>Convierte datos de cadencia en datos de velocidad</legend>
+                <input class="form-submit" type="submit">
+                <div class="form-label-input">
+                    <label class="form-label">Dientes de plato*: </label>
+                    <input id="plato" class="form-input" min="28" max="90" type="number" step="1" placeholder="54" required>
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Dientes de piñon*: </label>
+                    <input id="piñon" class="form-input" type="number" min="9" max="36" step="1" placeholder="16" required>
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Cadencia (rpm)*: </label>
+                    <input id="cadencia" class="form-input" type="number" min="40" max="300" step="1" value="100" required>
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Perimetro de la rueda (mm)*: </label>
+                    <input id="perimetro" class="form-input" type="number" min="1000" max="3000" value="2130" required>
+                </div>
+                <div class="form-label-input">
+                    <label class="form-label">Tiempo primera vuelta(sec): </label>
+                    <input id="primera-vuelta" class="form-input" type="number" min="10" max="59" placeholder="20">
+                </div>
+            </form>
+            <div class="separator"></div>
+            <div id="CadVel-results" class="form-results">
+                <!--edited in java-->
+            </div>
+        </div>
+    </body>
+    <footer>
+        <a href="https://biobikefit.com/es/articulos/medida-rueda-circunferencia/" class="footer">Tabla de perimetros</a>
+        <a id="language-change" class="footer language" href="index_en.html">ENG</a>
+    </footer>
+    <script src="script.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2359256479558254"
+     crossorigin="anonymous"></script>
+</html>
